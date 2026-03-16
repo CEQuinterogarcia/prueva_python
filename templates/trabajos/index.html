@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container mt-5 text-center">
+
+    <h1 class="mb-4">Gestión de Trabajos</h1>
+
+    <div class="d-flex justify-content-center gap-3">
+        <a href="{{ url_for('crear') }}" class="btn btn-success btn-lg mx-2">Crear Trabajo</a>
+        <a href="{{ url_for('mostrar') }}" class="btn btn-primary btn-lg mx-2">Mostrar Trabajos</a>
+    </div>
+
+</body>
+</html>

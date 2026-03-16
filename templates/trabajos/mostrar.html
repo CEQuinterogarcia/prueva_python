@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>mostrar</title>
+</head>
+<body>
+   mostrar datos
+
+   <table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>#</th>
+            <th>Tit. de Trabajo</th>
+            <th>Tipo de Trabajo</th>
+            <th>Autor</th>
+            <th>Curso</th>
+            <th>Especialidad</th>
+            <th>Imagen</th>
+            <th>Exportar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for trabajo in trabajos %}
+            
+        <tr>
+            <td>{{trabajo[0] }}</td>
+            <td>{{trabajo[1] }}</td>
+            <td>{{trabajo[2] }}</td>
+            <td>{{trabajo[3] }}</td>
+            <td>{{trabajo[7] }}</td>
+            <td>{{trabajo[11] }}</td>
+            <td>
+            <img src="{{ url_for('mostrar_imagen', id=trabajo[0]) }}" width="100">
+            </td>
+            <td>
+              <a href="{{ url_for('exportar_pdf', id_trabajos=trabajo[0]) }}" class="btn btn-sm btn-primary">
+              Exportar PDF
+              </a>
+            </td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+   </table>
+</body>
+</html>

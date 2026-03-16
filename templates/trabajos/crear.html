@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Trabajo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+
+  <h2 class="mb-4">Agregar Nuevo Trabajo</h2>
+
+  <form method="post" action="/guardar" enctype="multipart/form-data">
+    
+    <div class="form-group">
+      <label for="txtT_trabajo">Título de trabajo</label>
+      <input type="text" class="form-control" name="txtT_trabajo" id="txtT_trabajo" required>
+    </div>
+
+    <div class="form-group">
+      <label for="selTi_trabajo">Tipo de trabajo</label>
+      <select class="form-control" id="selTi_trabajo" name="selTi_trabajo">
+        <option value="tr1">tr1</option>
+        <option value="tr2">tr2</option>
+        <option value="tr3">tr3</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="txtAutor">Autor</label>
+      <input type="text" class="form-control" name="txtAutor" id="txtAutor" required>
+    </div>
+
+    <div class="form-group">
+      <label for="txtUniversidad">Universidad</label>
+      <input type="text" class="form-control" name="txtUniversidad" id="txtUniversidad">
+    </div>
+
+    <div class="form-group">
+      <label for="txtP_clave">Palabras Clave</label>
+      <input type="text" class="form-control" name="txtP_clave" id="txtP_clave">
+    </div>
+
+    <div class="form-group">
+      <label for="txtResumen">Resumen</label>
+      <textarea class="form-control" name="txtResumen" id="txtResumen" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="selCurso">Curso</label>
+      <select class="form-control" id="selCurso" name="selCurso">
+        <option value="curso1">curso1</option>
+        <option value="curso2">curso2</option>
+        <option value="curso3">curso3</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="filImagen">Imagen</label>
+      <input type="file" class="form-control-file" name="filImagen" id="filImagen" accept="image/*">
+    </div>
+
+    <div class="form-group">
+      <label for="filPdf">Archivo PDF</label>
+      <input type="file" class="form-control-file" name="filPdf" id="filPdf" accept="application/pdf">
+    </div>
+
+    <div class="form-group">
+      <label for="txtCiudad">Ciudad</label>
+      <input type="text" class="form-control" name="txtCiudad" id="txtCiudad">
+    </div>
+
+    <div class="form-group">
+      <label for="selEspecialidad">Especialidad</label>
+      <select class="form-control" id="selEspecialidad" name="selEspecialidad">
+        <option value="esp1">esp1</option>
+        <option value="esp2">esp2</option>
+        <option value="esp3">esp3</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Agregar</button>
+  </form>
+
+</body>
+</html>
